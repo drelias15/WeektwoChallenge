@@ -12,14 +12,14 @@ public class InvoiceApp {
         Random rand = new Random();
         NumberFormat formatter = new DecimalFormat("#0.00");
 
-        int taxCode = rand.nextInt(3);
+        int taxCode = 1 + rand.nextInt(4);
         double taxRate;
         switch (taxCode){
-            case 0: taxRate = 0.06;
+            case 1: taxRate = 0.06;
                     break;
-            case 1: taxRate = 0.053;
+            case 2: taxRate = 0.053;
                     break;
-            case 2: taxRate = 0.0575;
+            case 3: taxRate = 0.0575;
                     break;
             default: taxRate = 0.050;
                     break;
