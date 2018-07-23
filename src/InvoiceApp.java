@@ -38,19 +38,19 @@ public class InvoiceApp {
         while (!userInput.equalsIgnoreCase("q")) {
 
 
-            System.out.println("Enter a food item you want: (or type q to exit): ");
+            printer("Enter a food item you want: (or type q to exit): ");
             String foodItem = keyboard.next();
 
-            System.out.println("Price ");
+            printer("Price ");
             double itemPrice = keyboard.nextDouble();
 
-            System.out.println("Taxable: ");
+            printer("Taxable: ");
             boolean itemTaxable = keyboard.nextBoolean();
 
-            System.out.println("Quantity: ");
+            printer("Quantity: ");
             int quantity = keyboard.nextInt();
 
-            if ((foodItem == "COCACOLA") && (quantity > 7)){
+            if ((foodItem.equalsIgnoreCase("cocacola")) && (quantity > 7)){
                 quantity = 7;
             }
 
@@ -85,5 +85,9 @@ public class InvoiceApp {
         keyboard.close();
 
 
+    }
+
+    private static void printer (String output){
+        System.out.println(output);
     }
 }
